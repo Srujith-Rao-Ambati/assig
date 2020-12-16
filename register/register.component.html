@@ -1,0 +1,17 @@
+<div>
+    <label class="form-control">UserName</label>
+    <input class="form-control" type="text" [(ngModel)]="user.userName" #userName="ngModel" required minlength="6">
+    <div class="alert alert-danger" *ngIf="!userName.valid && userName.touched">
+        <div *ngIf="userName.touched && userName.errors.required">Username can't be empty</div>
+        <div *ngIf="userName.touched && userName.errors.minlength">Username should be atleast {{userName.errors.minlength}}</div>
+    </div>
+    <label class="form-control">Password</label>
+    <input class="form-control" type="text" [(ngModel)]="user.password" required>
+    <label class="form-control">Name</label>
+    <input class="form-control" type="text" [(ngModel)]="user.name" required>
+    <label class="form-control">Age</label>
+    <input class="form-control" type="number" [(ngModel)]="user.age" required>
+    <label class="form-control">Phone</label>
+    <input class="form-control" type="text" [(ngModel)]="user.phone" required>
+    <button class="btn btn-primary" (click)="register(userName)">Register</button>
+</div>

@@ -1,0 +1,4 @@
+<!-- <button class="btn btn-danger" (click)="delete()">Remove Contact</button> -->
+<select #contactname (change)="delete(contactname)">
+    <option *ngFor="let cont of contacts" [value]="cont.name">{{cont.name}}</option>
+</select>

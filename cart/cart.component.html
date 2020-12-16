@@ -1,0 +1,8 @@
+<p>cart works!</p>
+<div *ngFor="let f of cart;index as i">
+    <app-flower [flower]="f" (calculate)="calculateTotal()"></app-flower>
+    <div>{{subTotal[i]}}</div>
+</div>
+<div *ngIf="cart.length!=0" class="alert alert-info">
+    Total: {{grandTotal}}
+</div>

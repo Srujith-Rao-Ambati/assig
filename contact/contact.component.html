@@ -1,0 +1,24 @@
+<head>
+    <style>
+        #cont{
+    background-color: beige;
+    width:40%;
+}
+#b1{
+    margin-left:60%;
+}
+    </style>
+
+</head>
+<section *ngFor="let con of contacts">
+<div id="cont">
+&nbsp;    {{con.name}}
+    <br>
+    <br>
+&nbsp;    {{con.phone}} <button id="b1" class="btn btn-danger" (click)="delete(con.name)">Remove</button>
+<!-- <div>
+    <app-deletecontact></app-deletecontact>
+</div> -->
+    <hr>
+</div>
+</section>

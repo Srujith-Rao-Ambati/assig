@@ -1,0 +1,17 @@
+<style>
+    #disp{
+        background-color: beige;
+    width:40%;
+    }
+</style>
+<div>
+    <input class="fomr-control" type="text" [(ngModel)]="name" placeholder="Enter name to search">
+    <br>
+    <section *ngFor="let cont of contacts" >
+        <div id="disp" *ngIf="cont.name==name">
+            {{cont.name}}
+            <br>
+            {{cont.phone}}
+        </div>
+    </section>
+</div>

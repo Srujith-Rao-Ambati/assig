@@ -1,0 +1,17 @@
+<head>
+    <style>
+              #add{
+    width:20%;
+}
+    </style>
+</head>
+<button class="btn btn-primary" (click)="display()" show="!show">Add Contact</button>
+<div id="add" *ngIf="show">
+    <br>
+    <label class="form-control">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.name">
+    <label class="form-control">Phone</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.phone">
+    <br>
+    <button (click)="insertContact()" class="btn btn-success">Add</button>
+</div>
